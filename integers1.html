@@ -1,0 +1,35 @@
+<!--Write a JavaScript program to compute the sum of the two given integers. If the two values are same, then returns triple their sum.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Exercise</title>
+</head>
+<body>
+
+    <div id="output"></div>
+
+    <script>
+    "use strict";
+
+    var $ = function(id) { return document.getElementById(id); };
+
+    var answer = "";
+
+    var integer1 = parseInt(prompt("Enter an integer"));
+    var integer2 = parseInt(prompt("Enter another integer"));
+
+    if (integer1 === integer2) {
+        answer = (integer1 + integer2) * 3;
+    }
+    else {
+        answer = integer1 + integer2;
+    }
+
+    $("output").innerHTML = answer;
+
+    </script>
+
+</body>
+</html>
