@@ -1,0 +1,58 @@
+<!--Write a JavaScript conditional statement to find the largest of five numbers. Display the result.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Exercise</title>
+</head>
+<body>
+
+    <div id="output"></div>
+
+    <script>
+    "use strict";
+
+    var $ = function(id) { return document.getElementById(id); };
+
+    // BRUTE
+
+    var num1 = 1;
+    var num2 = -9;
+    var num3 = 21;
+    var num4 = 333;
+    var num5 = -99
+    var answer = 0;
+
+    if (num1 > num2 && num1 > num3 && num1 > num4 && num1 > num5) {
+        answer = num1;
+    }
+    else if (num2 > num1 && num2 > num3 && num2 > num4 && num2 > num5) {
+       answer = num2;
+    }
+    else if (num3 > num1 && num3 > num2 && num3 > num4 && num3 > num5) {
+        answer = num2;
+    }
+    else if (num4 > num1 && num4 > num2 && num4 > num3 && num4 > num5) {
+        answer = num4;
+    }
+    else {
+        answer = num5;
+    }
+
+    // SORT METHOD
+
+    var numbers = [1, 7, 300, 21, 270]
+
+    var answer1 = 0;
+
+    answer1 = numbers.sort(function(a, b) {return b-a});
+
+    answer1 = numbers[0];
+
+    $("output").innerHTML = answer + " " + answer1;
+
+    </script>
+
+</body>
+</html>
