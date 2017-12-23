@@ -1,0 +1,45 @@
+<!--Write a JavaScript program to construct the following pattern, using a nested for loop.
+
+*
+* *
+* * *
+* * * *
+* * * * *
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Exercise</title>
+</head>
+<body>
+
+    <div id="output"></div>
+
+    <script>
+    "use strict";
+
+    var $ = function(id) { return document.getElementById(id); };
+
+    var stairs = function(step) {
+        var stair = "";
+
+        for (var i = 0; i < step; i++) {
+            for (var j = 0; j < i; j++) {
+                stair += " * ";
+            }
+            stair += "<br>";
+        }
+        return stair;
+    };
+
+    var capture = stairs(6);
+
+    $("output").innerHTML = capture;
+
+    </script>
+
+</body>
+</html>
